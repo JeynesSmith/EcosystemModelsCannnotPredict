@@ -11,7 +11,7 @@ FittingResults = cell(111,Target,7); % initialise storage
 save 'Experimental fitting results'\Results FittingResults Target % save parameters and initial storage
 
 % loop over microcosm experiments
-parfor DS = 1:111
+for DS = 1:111
     disp(DS) 
     sub_Multiple_Experimental_Fits(DS) % run the fitting procedure
 end
