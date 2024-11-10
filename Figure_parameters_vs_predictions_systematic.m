@@ -10,7 +10,7 @@ for DS = 1:111 % loop of data sets
     Performance = Search_for_system(DS)
 
     if Performance(1,1) > 0 & Performance(2,1) < 0 % if parameters have been found that meet conditions, then save the figure
-        FileName = ['Figures/Comps/Figure_Correlation_ds_' num2str(DS) ...
+        FileName = ['Figures/Figure_Correlation_ds_' num2str(DS) ...
             '_ps1_' num2str(Performance(1,2)) ...
             '_' num2str(Performance(1,3)) ...
             '_ps2_' num2str(Performance(2,2)) ...
@@ -30,7 +30,7 @@ function Performance = Search_for_system(DS)
 
 warning off
 % load fits and experimental data
-load 'Experimental fitting results/Results' FittingResults NumSets
+load 'Experimental fitting results/Results' FittingResults
 load 'Experimental data'/Analysis_Timeseries
 load SharedParameters
 

@@ -6,14 +6,14 @@ function Figure_predict_responses_to_perturbation_Split()
 % decrease a species' abundance.
 
 % load data
-load 'Experimental fitting results'/Results FittingResults NumSets
+load 'Experimental fitting results'/Results FittingResults
 
 % open figures
 figure(4), clf; figure(5), clf;
 FS = 14; % fontsize
 
 % Analyse all datasets, or load dataset
-DoAnalyses = 0;
+DoAnalyses = 1;
 if DoAnalyses == 1
     CPI = []; CPC = [];
     for DS = 1:111
@@ -42,7 +42,7 @@ end
 % plot results for all networks
 load SharedParameters CMP 
 DefinitionAmbiguous = [0.15 0.17];
-keyboard
+
 Edges = linspace(0,1,25);
 for sp = 1:2
     figure(3+sp), hold on

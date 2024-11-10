@@ -9,7 +9,7 @@
 
 clear all
 
-load 'Experimental fitting results/Results_Smooth_0' FittingResults NumSets
+load 'Experimental fitting results/Results' FittingResults
 
 figure(1), clf, hold on; FS = 18;
 

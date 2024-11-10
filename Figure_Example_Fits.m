@@ -5,7 +5,7 @@
 clear all
 
 % load datasets
-load 'Experimental fitting results/Results' FittingResults NumSets
+load 'Experimental fitting results/Results' FittingResults
 load 'Experimental data'/Analysis_Timeseries
 
 % Select an exemplar data set

@@ -8,10 +8,10 @@
 
 clear all
 
-DoAnalyses = 0;
+DoAnalyses = 1;
 if DoAnalyses == 1
     % Load all the datasets
-    load 'Experimental fitting results'/Results FittingResults NumSets
+    load 'Experimental fitting results'/Results FittingResults
     load SharedParameters
 
     % Check interaction sign consistency
@@ -50,12 +50,12 @@ if DoAnalyses == 1
             MeanStd Q_threshold CMP DefinitionAmbiguous
     end
     % save analysis
-%     save DoneAnalysesSquare
+    save DoneAnalysesSquare
 end
 
 % load analysis
 clear all
-load DoneAnalysesSquare *onsist* MeanStd Q_threshold CMP DefinitionAmbiguous
+load DoneAnalysesSquare *onsist* Q_threshold CMP DefinitionAmbiguous
 
 % Plot the interaction types as a Ternary plot
 Amb_level_1 = DefinitionAmbiguous(1);
